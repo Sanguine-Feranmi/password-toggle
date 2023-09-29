@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <style>
+        *
+        {
+            list-style: none;
+        }
+        #ul
+        {
+            justify-content: space-between;
+            display: flex;
+            text-align: center;
+        }
+        #li
+        {
+            padding: 20px;
+            border: 2px dashed grey;
+            width: 150px;
+            /* background: #000; */
+            /* color: white; */
+        }
+    </style>
+</head>
+<body>
+    <div id="ul">
+        <p id="li">List</p>
+        <p id="li">List</p>
+        <p id="li">List</p>
+    </div>
+    <script>
+
+        var body = document.body;
+        var ul = document.getElementById("ul");
+        var li = document.getElementById("li");
+
+        // document.querySelectorAll("#li").style.background = "green"
+        document.getElementsByTagName("li").style.background = "green"
+        //  li.style.background = "red"
+        // li.onmouseenter = ()=>{
+            // li.style.background = "red"
+        // }
+
+        for (var i = 0; i > 3; i++){
+            li.onclick = (e)=> {
+                li.style.background = "red"
+            }
+
+        }
+    </script>
+</body>
+</html>

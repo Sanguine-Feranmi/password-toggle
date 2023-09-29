@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Pract</title>
+</head>
+<body>
+    <p class="pp" id="pp">&#9881;</p>
+    <script>
+        let pp = document.getElementById("pp")
+        let elm = document.body;
+
+        pp.onclick = ()=>{
+            elm.classList.toggle("dark-mode")
+        }
+    </script>
+    <div class="mother">
+        <h1>Password Toggle</h1>
+        <input type="password" id="pass" placeholder="input your password...">
+        <p id="check">Show </p>
+        <!-- <input type="submit"> -->
+        <script>
+            let pass = document.getElementById("pass");
+            let check = document.getElementById("check");
+    
+            check.style.display = "none";
+            pass.classList.add("constant")
+            // check.classList.add("show")
+
+            pass.onkeyup = ()=>{
+                check.style.display = "block";
+                if(pass.value != "Samad"){
+                    pass.style.color = "red"
+                    check.style.color = "red"
+                    pass.style.border = "red"
+                }else{
+                    pass.style.color = "green"
+                    pass.style.border = "black"
+                    check.style.color = "green"
+
+                }
+            };
+            
+            check.onclick = ()=>{
+                if(pass.type === "password"){
+                    pass.type = "text";
+                    pass.classList.add("constant")
+                    check.textContent = "Hide";
+                }else{
+                    pass.type = "password";
+                    check.textContent = "Show";
+                    // pass.classList.remove("constant")
+                };
+            };
+        </script>
+    </div>
+    <!-- lis js hover -->
+    <div class="li-hover">
+        <ul>
+            <li>Hover me</li>
+            <li>Hover me</li>
+            <li>Hover me</li>
+            <li>Hover me</li>
+            <li>Hover me</li>
+        </ul>
+        <script>
+            let li = document.querySelectorA("li")
+            li.onmouseenter =()=>{
+            forEach(li,()=> {
+                li.onmouseenter =()=>{
+                    li.style.background = "green"
+                }
+            });
+                }
+            li.onmouseleave =()=>{
+                    li.style.background = "transparent"
+            }
+
+        // forEach(li => {
+            li.onmouseenter =()=>{
+                    li.style.background = "green"
+                }
+        //  });
+        </script>
+    </div>
+</body>
+</html>
